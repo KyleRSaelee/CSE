@@ -16,194 +16,38 @@ class Item(object):
         self.value = value
 
 
-class Character(object):
-    def __init__(self, name, health):
-        self.name = name
-        self.health = health
-
-
 class Weapon(Item):
-    def __init__(self, name, material, damage_dealt):
+    def __init__(self, name, damage_dealt):
         super(Weapon, self).__init__(name, 100)
-        self.material = material
         self.damage = damage_dealt
         self.durability = 100
         self.upgrade = False
 
 
-class Bow(Weapon):
-    def __init__(self, name, material):
-        super(Bow, self).__init__(name, material, 20)
-        self.amount_of_arrows = 25
-
-    def shoot_arrow(self):
-        self.amount_of_arrows -= 1
-        print("You've shot an arrow.")
-
-    def pick_up_arrow_and_reload(self):
-        self.amount_of_arrows += 1
-        print("You've reloaded an arrow in to your bow")
-
-
-class Sword(Weapon):
-    def __init__(self, name, material, damage_dealt):
-        super(Sword, self).__init__(name, material, damage_dealt)
-        self.durability = 150
-
-    def attack(self):
-        self.durability -= 5
-        print("You've swung your sword.")
-
-    def defend(self):
-        self.durability -= 7
-        print("You have blocked with your sword.")
-
-
-Ancient_Sword = Sword("Ancient Sword", "Jewelery", 300)
-
-
-class Shield(Weapon):
-    def __init__(self, name, material, damage_dealt):
-        super(Shield, self).__init__(name, material, damage_dealt)
-        self.durability = 225
-
-    def block(self):
-        self.durability -= 3
-        print("You have blocked with your shield.")
-
-    def attack(self):
-        self.durability -= 5
-        print("You have bashed someone with your shield.")
-
-
-Steel_Shield = Shield("Steel Shield", "Steel", 125)
-
-
-class Axe(Weapon):
-    def __init__(self, name, material, damage_dealt):
-        super(Axe, self).__init__(name, material, damage_dealt)
-        self.durability = 115
-
-    def power_swing(self):
-        self.durability -= 5
-        print("You have activated power swing.")
-
-
-Diamond_Axe = Axe("Diamond Axe", "Diamond", 100)
-
-
-class Spear(Weapon):
-    def __init__(self, name, material):
-        super(Spear, self).__init__(name, material, 50)
-        self.durability = 200
-
-    def throw_spear(self):
-        self.durability -= 10
-        print("You have threw your spear.")
-
-
-class NinjaStar(Weapon):
-    def __init__(self, name, material):
-        super(NinjaStar, self).__init__(name, material, 100)
-        self.durability = 250
-        self.amount_of_stars = 5
-
-    def throw_star(self):
-        self.durability -= 5
-        self.amount_of_stars -= 1
-        print("You have threw your ninja star.")
-
-    def pick_up_star(self):
-        self.amount_of_stars += 1
-
-
-class Karambit(Weapon):
-    def __init__(self, name, material):
-        super(Karambit, self).__init__(name, material, 50)
-        self.durability = 500
-
-    def slice(self):
-        self.durability -= 1
-        print("You have sliced your opponent.")
-
-
-class Pistol(Weapon):
-    def __init__(self, name, material):
-        super(Pistol, self).__init__(name, material, 10)
-        self.durability = 250
-        self.ammo = 50
-        self.weapon_attachments = False
-
-    def shoot(self):
-        self.durability -= 1
-        self.ammo -= 1
-        print("You have shot a bullet with your pistol.")
-
-
-class RampageShotgun(Weapon):
-    def __init__(self, name, material):
-        super(RampageShotgun, self).__init__(name, material, 50)
-        self.automatic = False
-        self.durability = 500
-        self.ammo = 10
-        self.weapon_attachments = False
-
-    def shoot(self):
-        self.durability -= 10
-        self.ammo -= 10
-        self.automatic = True
-        print("You sprayed your enemy with bullets.")
-
-
-class Sniper(Weapon):
-    def __init__(self, name, material):
-        super(Sniper, self).__init__(name, material, 100)
-        self.durability = 1000
-        self.ammo = 15
-        self.weapon_attachments = False
-        self.automatic = False
-
-    def shoot(self):
-        self.automatic = False
-        self.durability -= 50
-        self.durability -= 1
-        print("You have shot a bullet with your sniper.")
-
-
-class AssaultRifle(Weapon):
-    def __init__(self, name, material):
-        super(AssaultRifle, self).__init__(name, material, 50)
-        self.durability = 750
-        self.ammo = 30
-        self.weapon_attachments = False
-        self.automatic = False
-
-    def shoot(self):
-        self.durability -= 5
-        self.ammo -= 1
-        self.automatic = True
-        print("You sprayed your enemy with your Rifle.")
-
-
-class RocketLauncher(Weapon):
-    def __init__(self, name, material):
-        super(RocketLauncher, self).__init__(name, material, 200)
-        self.durability = 250
-        self.ammo = 5
-        self.weapon_attachments = False
-
-    def shoot(self):
-        self.durability -= 10
-        self.ammo -= 1
-        print("You have launched a rocket at your opponent.")
-
-
-class Valuables(Item):
-    def __init__(self, name, value, rarity):
-        super(Valuables, self).__init__(name, value)
+class Character(object):
+    def __init__(self, name, health, weapon, armor):
         self.name = name
-        self.value = value
-        self.rarity = rarity
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
+
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health < 0:
+            self.health = 0
+        print("%s has %d health left." % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
+class Consumable(Item):
+    def __init__(self, name, value, health_gained, health_lost, usage_amount):
+        super(Consumable, self).__init__(name, value)
+        self.health_gained = health_gained
+        self.health_lost = health_lost
+        self.usage_amount = usage_amount
 
 
 class Tool(Item):
@@ -211,16 +55,6 @@ class Tool(Item):
         super(Tool, self).__init__(name, 50)
         self.material = material
         self.durability = 100
-
-
-class PickAxe(Tool):
-    def __init__(self, name, material):
-        super(PickAxe, self).__init__(name, material)
-        self.material = material
-
-    def swing(self):
-        self.durability -= 1
-        print("You have swung your PickAxe.")
 
 
 class Armor(Item):
@@ -283,25 +117,166 @@ class Boots(Armor):
         print("You have unequipped your boots.")
 
 
-class Consumable(Item):
-    def __init__(self, name, value, health_gained, health_lost, usage_amount):
-        super(Consumable, self).__init__(name, value)
-        self.health_gained = health_gained
-        self.health_lost = health_lost
-        self.usage_amount = usage_amount
+class PickAxe(Tool):
+    def __init__(self, name, material):
+        super(PickAxe, self).__init__(name, material)
+        self.material = material
+
+    def swing(self):
+        self.durability -= 1
+        print("You have swung your PickAxe.")
 
 
-class HealingPotion(Consumable):
-    def __init__(self, name, value, health_gained, health_lost, usage_amount):
-        super(HealingPotion, self).__init__(name, value, health_gained, health_lost, usage_amount)
-        self.health_gained = 100
-        self.health_lost = 0
-        self.usage_amount = 1
+class Bow(Weapon):
+    def __init__(self, name):
+        super(Bow, self).__init__(name, 20)
+        self.amount_of_arrows = 25
 
-    def drink(self):
-        self.health_gained += 100
-        self.usage_amount -= 1
-        print("You drank a healing potion.")
+    def shoot_arrow(self):
+        self.amount_of_arrows -= 1
+        print("You've shot an arrow.")
+
+    def pick_up_arrow_and_reload(self):
+        self.amount_of_arrows += 1
+        print("You've reloaded an arrow in to your bow")
+
+
+class Sword(Weapon):
+    def __init__(self, name, damage_dealt):
+        super(Sword, self).__init__(name, damage_dealt)
+        self.durability = 150
+
+    def attack(self):
+        self.durability -= 5
+        print("You've swung your sword.")
+
+    def defend(self):
+        self.durability -= 7
+        print("You have blocked with your sword.")
+
+
+class Shield(Weapon):
+    def __init__(self, name, damage_dealt):
+        super(Shield, self).__init__(name, damage_dealt)
+        self.durability = 225
+
+    def block(self):
+        self.durability -= 3
+        print("You have blocked with your shield.")
+
+    def attack(self):
+        self.durability -= 5
+        print("You have bashed someone with your shield.")
+
+
+Steel_Shield = Shield("Steel Shield", 125)
+
+
+class Axe(Weapon):
+    def __init__(self, name, damage_dealt):
+        super(Axe, self).__init__(name, damage_dealt)
+        self.durability = 115
+
+    def power_swing(self):
+        self.durability -= 5
+        print("You have activated power swing.")
+
+
+Diamond_Axe = Axe("Diamond Axe", 100)
+
+
+class Spear(Weapon):
+    def __init__(self, name):
+        super(Spear, self).__init__(name, 50)
+        self.durability = 200
+
+    def throw_spear(self):
+        self.durability -= 10
+        print("You have threw your spear.")
+
+
+class NinjaStar(Weapon):
+    def __init__(self, name):
+        super(NinjaStar, self).__init__(name, 100)
+        self.durability = 250
+        self.amount_of_stars = 5
+
+    def throw_star(self):
+        self.durability -= 5
+        self.amount_of_stars -= 1
+        print("You have threw your ninja star.")
+
+    def pick_up_star(self):
+        self.amount_of_stars += 1
+
+
+class Karambit(Weapon):
+    def __init__(self, name):
+        super(Karambit, self).__init__(name, 50)
+        self.durability = 500
+
+    def slice(self):
+        self.durability -= 1
+        print("You have sliced your opponent.")
+
+
+class Gun(Weapon):
+    def __init__(self, name, damage_dealt):
+        super(Gun, self).__init__(name, damage_dealt)
+        self.name = name
+        self.weapon_attachments = False
+
+
+class Pistol(Gun):
+    def __init__(self, name):
+        super(Pistol, self).__init__(name, 10)
+        self.durability = 250
+        self.ammo = 50
+        self.weapon_attachments = False
+
+    def shoot(self):
+        self.durability -= 1
+        self.ammo -= 1
+        print("You have shot a bullet with your pistol.")
+
+
+class RampageShotgun(Gun):
+    def __init__(self, name):
+        super(RampageShotgun, self).__init__(name, 50)
+        self.durability = 500
+        self.ammo = 10
+        self.weapon_attachments = False
+
+    def shoot(self):
+        self.durability -= 10
+        self.ammo -= 10
+        print("You sprayed your enemy with bullets.")
+
+
+class Sniper(Gun):
+    def __init__(self, name):
+        super(Sniper, self).__init__(name, 100)
+        self.durability = 1000
+        self.ammo = 15
+        self.weapon_attachments = False
+
+    def shoot(self):
+        self.durability -= 50
+        self.durability -= 1
+        print("You have shot a bullet with your sniper.")
+
+
+class AssaultRifle(Gun):
+    def __init__(self, name):
+        super(AssaultRifle, self).__init__(name, 50)
+        self.durability = 750
+        self.ammo = 30
+        self.weapon_attachments = False
+
+    def shoot(self):
+        self.durability -= 5
+        self.ammo -= 1
+        print("You sprayed your enemy with your Rifle.")
 
 
 Golden_Apple = Consumable("Golden Apple", 50, 100, 0, 10)
@@ -393,13 +368,21 @@ parking_lot = Room("The Parking Lot", None, "R19A")
 player = Player(DINING_ROOM)
 
 # Items
-
-sword = Weapon("Diamond Sword", "Diamond", 100)
-sword2 = Weapon("Iron Sword", "Steel", 25)
+# Armor
+Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
+Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 50)
+Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 25)
+Diamond_Boots = Armor("Diamond Boots", "Diamond", 25)
+# Weapon
+Diamond_Sword = Sword("Diamond Sword", 100)
+Iron_Sword = Sword("Iron Sword", 25)
+Ancient_Sword = Sword("Ancient Sword", 300)
+# Gun
+Pistol = Gun("Pistol", 10)
 
 # Characters
-c1 = Character("Kid1", 100, sword, None)
-c2 = Character("Kid2", 100, sword2, None)
+c1 = Character("Kid1", 100, Diamond_Sword, None)
+c2 = Character("Kid2", 100, Iron_Sword, None)
 c1.attack(c2)
 
 playing = True
