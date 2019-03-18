@@ -116,4 +116,83 @@ def grade_calc(percentage):
 
 print(grade_calc(100))
 
+# Equality Statements
+print(5 > 3)
+print(5 >= 3)
+print(3 == 3)
+print(3 != 4)
+"""
+a = 3  # A is set to 3
+a == 3 # Is a equal to 3?
+"""
 
+# Lists
+shopping_list = ["whole milk", "PC", "Eggs", "Switch"]
+print(shopping_list)
+print(shopping_list[0])
+print("The second thing in the list is %s" % shopping_list[1])
+print("The length of the list is %d" % len(shopping_list))
+
+# Changing Elements in a list
+shopping_list[0] = "2% milk"
+print(shopping_list)
+print(shopping_list[0])
+
+# Looping through lists
+for item in shopping_list:
+    print(item)
+
+'''
+1. Make a list
+2. change the 3rd thing in the list
+3. print the item
+4. print the full list
+'''
+new_list = ["eggs", "cheese", "oranges", "raspberries"]
+new_list[2] = "apples"
+print("The last thing in the list is %s" % new_list[len(new_list) - 1])
+print(new_list)
+
+# Getting part of a list
+print(new_list[1:3])
+print(new_list[1:4])
+print(new_list[1:])
+print(new_list[:2])
+
+# Adding things to a list
+holiday_list = []  # ALWAYS USE SQUARE BRACKETS
+holiday_list.append("Tacos")
+holiday_list.append("Bumblebee")
+holiday_list.append("Red Dead Redemption 2")
+print(holiday_list)
+# Notice this is "object.method(Parameters)"
+
+# Removing things from a list
+holiday_list.remove("Tacos")
+print(holiday_list)
+
+"""
+1. make a new list with 3 items
+2. Add a 4th item to the list
+3. Remove one of the first three items from the list
+"""
+
+# ALSO removing things from a list
+holiday_list.pop(0)  # Removes the item at index 0
+print(holiday_list)
+
+# Tuple
+brands = ("apple", "Samsung", "HTC")  # notice the parentheses
+
+colors = ["blue", 'cyan', 'teal', 'red', 'green', 'orange', 'purple',
+          'pink', 'black', 'gold', 'magenta', 'brown', 'turquoise',
+          'white', 'gray', 'yellow']
+print(len(colors))
+
+# Find the index
+print(colors.index("gold"))
+
+# Changing things into a list
+string1 = "turquoise"
+list1 = list(string1)
+print(list1)
