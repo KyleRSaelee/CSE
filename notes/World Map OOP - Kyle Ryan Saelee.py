@@ -1,5 +1,6 @@
 class Room(object):
-    def __init__(self, name, north=None, east=None, south=None, west=None, up=None, down=None, description=""):
+    def __init__(self, name, north=None, east=None, south=None, west=None, up=None, down=None, description="",
+                 items=[]):
         self.name = name
         self.north = north
         self.east = east
@@ -8,6 +9,7 @@ class Room(object):
         self.up = up
         self.down = down
         self.description = description
+        self.items = items
 
 
 class Item(object):
@@ -17,10 +19,10 @@ class Item(object):
 
 
 class Weapon(Item):
-    def __init__(self, name, damage_dealt):
+    def __init__(self, name, damage_dealt, durability):
         super(Weapon, self).__init__(name, 100)
         self.damage = damage_dealt
-        self.durability = 100
+        self.durability = durability
         self.upgrade = False
 
 
@@ -58,10 +60,10 @@ class Tool(Item):
 
 
 class Armor(Item):
-    def __init__(self, name, material, value=100):
-        super(Armor, self).__init__(name, value)
+    def __init__(self, name, material, durability):
+        super(Armor, self).__init__(name, 100)
         self.material = material
-        self.durability = 100
+        self.durability = durability
         self.equipped = False
 
 
@@ -128,9 +130,10 @@ class PickAxe(Tool):
 
 
 class Bow(Weapon):
-    def __init__(self, name):
-        super(Bow, self).__init__(name, 20)
+    def __init__(self, name, durability):
+        super(Bow, self).__init__(name, 20, durability)
         self.amount_of_arrows = 25
+        self.durability = 100
 
     def shoot_arrow(self):
         self.amount_of_arrows -= 1
@@ -142,8 +145,8 @@ class Bow(Weapon):
 
 
 class Sword(Weapon):
-    def __init__(self, name, damage_dealt):
-        super(Sword, self).__init__(name, damage_dealt)
+    def __init__(self, name, damage_dealt, durability):
+        super(Sword, self).__init__(name, damage_dealt, durability)
         self.durability = 150
 
     def attack(self):
@@ -156,8 +159,8 @@ class Sword(Weapon):
 
 
 class Shield(Weapon):
-    def __init__(self, name, damage_dealt):
-        super(Shield, self).__init__(name, damage_dealt)
+    def __init__(self, name, damage_dealt, durability):
+        super(Shield, self).__init__(name, damage_dealt, durability)
         self.durability = 225
 
     def block(self):
@@ -169,12 +172,9 @@ class Shield(Weapon):
         print("You have bashed someone with your shield.")
 
 
-Steel_Shield = Shield("Steel Shield", 125)
-
-
 class Axe(Weapon):
-    def __init__(self, name, damage_dealt):
-        super(Axe, self).__init__(name, damage_dealt)
+    def __init__(self, name, damage_dealt, durability):
+        super(Axe, self).__init__(name, damage_dealt, durability)
         self.durability = 115
 
     def power_swing(self):
@@ -182,12 +182,9 @@ class Axe(Weapon):
         print("You have activated power swing.")
 
 
-Diamond_Axe = Axe("Diamond Axe", 100)
-
-
 class Spear(Weapon):
-    def __init__(self, name):
-        super(Spear, self).__init__(name, 50)
+    def __init__(self, name, durability):
+        super(Spear, self).__init__(name, 50, durability)
         self.durability = 200
 
     def throw_spear(self):
@@ -196,8 +193,8 @@ class Spear(Weapon):
 
 
 class NinjaStar(Weapon):
-    def __init__(self, name):
-        super(NinjaStar, self).__init__(name, 100)
+    def __init__(self, name, durability):
+        super(NinjaStar, self).__init__(name, 100, durability)
         self.durability = 250
         self.amount_of_stars = 5
 
@@ -211,8 +208,8 @@ class NinjaStar(Weapon):
 
 
 class Karambit(Weapon):
-    def __init__(self, name):
-        super(Karambit, self).__init__(name, 50)
+    def __init__(self, name, durability):
+        super(Karambit, self).__init__(name, 50, durability)
         self.durability = 500
 
     def slice(self):
@@ -221,15 +218,15 @@ class Karambit(Weapon):
 
 
 class Gun(Weapon):
-    def __init__(self, name, damage_dealt):
-        super(Gun, self).__init__(name, damage_dealt)
+    def __init__(self, name, damage_dealt, durability):
+        super(Gun, self).__init__(name, damage_dealt, durability)
         self.name = name
         self.weapon_attachments = False
 
 
 class Pistol(Gun):
-    def __init__(self, name):
-        super(Pistol, self).__init__(name, 10)
+    def __init__(self, name, durability):
+        super(Pistol, self).__init__(name, 10, durability)
         self.durability = 250
         self.ammo = 50
         self.weapon_attachments = False
@@ -241,8 +238,8 @@ class Pistol(Gun):
 
 
 class RampageShotgun(Gun):
-    def __init__(self, name):
-        super(RampageShotgun, self).__init__(name, 50)
+    def __init__(self, name, durability):
+        super(RampageShotgun, self).__init__(name, 50, durability)
         self.durability = 500
         self.ammo = 10
         self.weapon_attachments = False
@@ -254,8 +251,8 @@ class RampageShotgun(Gun):
 
 
 class Sniper(Gun):
-    def __init__(self, name):
-        super(Sniper, self).__init__(name, 100)
+    def __init__(self, name, durability):
+        super(Sniper, self).__init__(name, 100, durability)
         self.durability = 1000
         self.ammo = 15
         self.weapon_attachments = False
@@ -267,8 +264,8 @@ class Sniper(Gun):
 
 
 class AssaultRifle(Gun):
-    def __init__(self, name):
-        super(AssaultRifle, self).__init__(name, 50)
+    def __init__(self, name, durability):
+        super(AssaultRifle, self).__init__(name, 50, durability)
         self.durability = 750
         self.ammo = 30
         self.weapon_attachments = False
@@ -297,14 +294,40 @@ class Player(object):
         """
         self.current_location = new_location
 
+# Armor
 
-R19A = Room("R19A")
-parking_lot = Room("The Parking Lot", None, R19A)
-R19A.north = parking_lot
+
+Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
+Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 50)
+Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 25)
+Diamond_Boots = Armor("Diamond Boots", "Diamond", 25)
+# Weapon
+Diamond_Sword = Sword("Diamond Sword", 100, 100)
+Iron_Sword = Sword("Iron Sword", 25, 50)
+Ancient_Sword = Sword("Ancient Sword", 300, 500)
+Diamond_Axe = Axe("Diamond Axe", 100, 100)
+Steel_Shield = Shield("Steel Shield", 125, 250)
+spear = Weapon("Bloody Spear", 15, 100)
+bow = Weapon("Ancient Bow", 30, 115)
+ninja_star = Weapon("Shuriken", 75, 500)
+karambit = Weapon("Marble Fade Karambit", 1000, 1000000)
+# Tool
+Diamond_PickAxe = PickAxe("Diamond Pickaxe", "Diamond")
+# Gun
+Shotgun = Gun("Rampage Shotgun", 20, 300)
+pistol = Gun("Pistol", 10, 400)
+sniper = Gun("Paladin", 150, 1000)
+assault_rifle = Gun("Diamond Assault Rifle", 500, 10000)
+
+# Characters
+c1 = Character("Kid1", 100, Diamond_Sword, None)
+c2 = Character("Kid2", 100, Iron_Sword, None)
+c1.attack(c2)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "MASTER_BEDROOM", None, None, "This is the room that you are in right now. "
-                                                               "There are rooms to the North, East, South and West.")
+                                                               "There are rooms to the North, East, South and West.",
+                   ["Diamond_Helmet"])
 
 MASTER_BEDROOM = Room("Master Bedroom", "BALCONY", "BATHROOM",
                       "GAME_ROOM", "MASTER_BEDROOM", None, None, "You are currently in the Master Bedroom. "
@@ -359,31 +382,9 @@ DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING
 ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up.")
 GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "")
 
-# Option 2
-# Put them in quotes
-R19A = Room("R19A", "parking_lot")
-parking_lot = Room("The Parking Lot", None, "R19A")
 
 # Players
 player = Player(DINING_ROOM)
-
-# Items
-# Armor
-Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
-Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 50)
-Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 25)
-Diamond_Boots = Armor("Diamond Boots", "Diamond", 25)
-# Weapon
-Diamond_Sword = Sword("Diamond Sword", 100)
-Iron_Sword = Sword("Iron Sword", 25)
-Ancient_Sword = Sword("Ancient Sword", 300)
-# Gun
-Pistol = Gun("Pistol", 10)
-
-# Characters
-c1 = Character("Kid1", 100, Diamond_Sword, None)
-c2 = Character("Kid2", 100, Iron_Sword, None)
-c1.attack(c2)
 
 playing = True
 directions = ['north', 'east', 'south', 'west', 'up', 'down']
