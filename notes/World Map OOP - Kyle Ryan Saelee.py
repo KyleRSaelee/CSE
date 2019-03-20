@@ -53,8 +53,8 @@ class Consumable(Item):
 
 
 class Tool(Item):
-    def __init__(self, name, material):
-        super(Tool, self).__init__(name, 50)
+    def __init__(self, name, material, durability):
+        super(Tool, self).__init__(name, 50, durability)
         self.material = material
         self.durability = 100
 
@@ -276,9 +276,6 @@ class AssaultRifle(Gun):
         print("You sprayed your enemy with your Rifle.")
 
 
-Golden_Apple = Consumable("Golden Apple", 50, 100, 0, 10)
-
-
 class Player(object):
     def __init__(self, starting_location):
         self.health = 100
@@ -294,14 +291,14 @@ class Player(object):
         """
         self.current_location = new_location
 
-# Armor
-
 
 Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
 Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 50)
 Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 25)
 Diamond_Boots = Armor("Diamond Boots", "Diamond", 25)
+
 # Weapon
+Steel_Sword = Sword("Steel Sword", 25, 100)
 Diamond_Sword = Sword("Diamond Sword", 100, 100)
 Iron_Sword = Sword("Iron Sword", 25, 50)
 Ancient_Sword = Sword("Ancient Sword", 300, 500)
@@ -311,17 +308,23 @@ spear = Weapon("Bloody Spear", 15, 100)
 bow = Weapon("Ancient Bow", 30, 115)
 ninja_star = Weapon("Shuriken", 75, 500)
 karambit = Weapon("Marble Fade Karambit", 1000, 1000000)
+
 # Tool
 Diamond_PickAxe = PickAxe("Diamond Pickaxe", "Diamond")
+Trash_PickAxe = PickAxe("Trashy Pickaxe", "Garbage")
+
 # Gun
 Shotgun = Gun("Rampage Shotgun", 20, 300)
 pistol = Gun("Pistol", 10, 400)
 sniper = Gun("Paladin", 150, 1000)
 assault_rifle = Gun("Diamond Assault Rifle", 500, 10000)
 
+# Consumable
+Golden_Apple = Consumable("Golden Apple", 50, 100, 0, 10)
+
 # Characters
 c2 = Character("Kid2", 100, Iron_Sword, None)
-c1 = Character("Kid1", 100, Diamond_Sword, No
+c1 = Character("Kid1", 100, Diamond_Sword, None)
 c1.attack(c2)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
