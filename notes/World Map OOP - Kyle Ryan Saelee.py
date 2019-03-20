@@ -320,8 +320,8 @@ sniper = Gun("Paladin", 150, 1000)
 assault_rifle = Gun("Diamond Assault Rifle", 500, 10000)
 
 # Characters
-c1 = Character("Kid1", 100, Diamond_Sword, None)
 c2 = Character("Kid2", 100, Iron_Sword, None)
+c1 = Character("Kid1", 100, Diamond_Sword, None)
 c1.attack(c2)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
