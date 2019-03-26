@@ -315,6 +315,11 @@ Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
 Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 100)
 Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 100)
 Diamond_Boots = Armor("Diamond Boots", "Diamond", 100)
+Ancient_Helmet = Armor("Ancient Helmet", "Jewelery", 1000)
+Ancient_ChestPlate = Armor("Ancient Chestplate", "Jewelery", 1000)
+Ancient_Leggings = Armor("Ancient Leggings", "Jewelery", 1000)
+Ancient_Boots = Armor("Ancient Boots", "Jewelery", 1000)
+Hellfire_Armor = Armor("Hellfire Armor", "Unknown", 10000)
 
 # Weapon
 Steel_Sword = Sword("Steel Sword", 25, 100)
@@ -355,12 +360,14 @@ Ghost = Character("Ghost", 100, sniper2, Trash_ChestPlate)
 Goblin = Character("Goblin", 100, dagger, None)
 Soldier = Character("Soldier", 150, Fire_Shotgun, None)
 Water_Monster = Character("Water Monster", 100, None, None)
-
+Venus_Fly_Trap = Character("Venus Fly Trap", 100, bow, None)
+Protector = Character("Sacred Item Protector", 1000, flamethrower, Ancient_ChestPlate)
+Demon = Character("Disco Demon",  100, spear, None)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "MASTER_BEDROOM", None, None, "This is the room that you are in right now. "
                                                                "There are rooms to the North, East, South and West.",
-                   [Trash_Helmet], [])
+                   [], [])
 
 MASTER_BEDROOM = Room("Master Bedroom", "BALCONY", "BATHROOM",
                       "GAME_ROOM", "MASTER_BEDROOM", None, None, "You are currently in the Master Bedroom. "
@@ -389,17 +396,17 @@ SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, 
                                                                                       "West and South.", [flamethrower],
                  [])
 
-BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "There is a room to the West.")
-BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "There is a room to the South.")
+BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "There is a room to the West.", [], [])
+BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "There is a room to the South.", [], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "There are rooms to the South and West.",
                [], [])
 
 RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, None, None, "Interesting, there's a "
                                                                                "ladder here. There's also a "
-                                                                               "room to the North.", [], [])
+                                                                               "room to the North.", [sniper2], [])
 
 KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM", None, None, None, "There are rooms to the East and South"
-                                                                                 "", [], [])
+                                                                                 "", [Golden_Apple], [])
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE", None, None, "There are rooms to the North and "
                                                                                  "West.", [], [])
 
@@ -407,7 +414,7 @@ GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, 
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room.",
                     [RampageShotgun], [])
 FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East.")
-ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs.", [], [])
+ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs.", [Battle_Axe], [Protector])
 BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None, None, "There are rooms to the South and West.")
 BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM", None, "You can go up or go South.",
               [Ancient_Sword], [])
@@ -419,8 +426,9 @@ UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWA
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
                     "To the West is the Underground Parking Lot, to the South is an Elevator.", [], [Goblin])
 
-ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up.", [], [])
-GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "", [], [])
+ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up.", [spear],
+                [Demon])
+GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "", [], [Venus_Fly_Trap])
 
 
 # Players
@@ -449,6 +457,6 @@ while playing:
     else:
         print("Command Not Recognized.")
     if len(player.current_location.items) > 0:
-        print("There is an %s in this room.")
+        print("There is a %s in this room." % player.current_location.name)
     if len(player.current_location.characters) > 0:
         print("There is someone in this room.")
