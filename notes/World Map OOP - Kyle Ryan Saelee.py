@@ -305,6 +305,10 @@ class Player(object):
         """
         self.current_location = new_location
 
+    def print_inventory(self):
+        for item in self.inventory:
+            print(item.name)
+
 
 # Armor
 Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 10)
@@ -363,6 +367,8 @@ Water_Monster = Character("Water Monster", 100, None, None)
 Venus_Fly_Trap = Character("Venus Fly Trap", 100, bow, None)
 Protector = Character("Sacred Item Protector", 1000, flamethrower, Ancient_ChestPlate)
 Demon = Character("Disco Demon",  100, spear, None)
+Gnome = Character("Gnome", 100, dagger, None)
+
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "MASTER_BEDROOM", None, None, "This is the room that you are in right now. "
@@ -371,13 +377,12 @@ DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
 
 MASTER_BEDROOM = Room("Master Bedroom", "BALCONY", "BATHROOM",
                       "GAME_ROOM", "MASTER_BEDROOM", None, None, "You are currently in the Master Bedroom. "
-                                                                 "You see that there is a suitcase on the bed. "
                                                                  "There is a room to the North, East, South and West.",
-                      [Trash_ChestPlate], [])
+                      [Trash_ChestPlate], [Gnome])
 
 LIVING_ROOM = Room("Living Room", "BACKYARD", None, "DINING_ROOM", "HALLWAY",
-                   None, None, "There are many boxes in here, you can go West or South.", [Trash_Leggings],
-                   [Steel_Sword])
+                   None, None, "You can travel West or South.", [Trash_Leggings],
+                   [])
 
 HALLWAY = Room("Hallway", None, "LIVING_ROOM", None,
                "GARDEN", None, None, "There is a sword on the floor, to the West is the garden.", [Trash_Boots], [])
@@ -408,7 +413,7 @@ RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, None, None, "
 KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM", None, None, None, "There are rooms to the East and South"
                                                                                  "", [Golden_Apple], [])
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE", None, None, "There are rooms to the North and "
-                                                                                 "West.", [], [])
+                                                                                 "West.", [Healing_Potion], [])
 
 GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, "There are rooms the North and East.")
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room.",
@@ -418,7 +423,7 @@ ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downs
 BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None, None, "There are rooms to the South and West.")
 BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM", None, "You can go up or go South.",
               [Ancient_Sword], [])
-FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can go East or go South.", [], [])
+FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can go East or go South.", [ninja_star], [])
 UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWAY", None, None, None,
                                None, "You can go North or East.", [Karambit], [Boss])
 
@@ -440,6 +445,13 @@ directions = ['north', 'east', 'south', 'west', 'up', 'down']
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    if len(player.current_location.items) > 0:
+        print("There is an item in this room.")
+        pickup = input("Would you like to pick it up?")
+        if pickup == "yes":
+            player.inventory = player.inventory + player.current_location.items
+
+            player.print_inventory()
     command = input(">_")
     if command.lower() in ["q", "quit", "exit"]:
         playing = False
@@ -456,7 +468,5 @@ while playing:
             print("I can't go that way.")
     else:
         print("Command Not Recognized.")
-    if len(player.current_location.items) > 0:
-        print("There is a %s in this room." % player.current_location.name)
     if len(player.current_location.characters) > 0:
-        print("There is someone in this room.")
+        print("There is an enemy in this room.")
