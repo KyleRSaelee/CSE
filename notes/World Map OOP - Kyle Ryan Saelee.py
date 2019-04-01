@@ -309,6 +309,9 @@ class Player(object):
         for item in self.inventory:
             print(item.name)
 
+    def attack(self):
+        self.attack()
+
 
 # Armor
 Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 10)
@@ -425,28 +428,31 @@ LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE", None, None,
                                                                                  "Potion.", [Healing_Potion], [])
 
 GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, "There are rooms the North and East.")
-STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room."
-                                                                                " A powerful shotgun lays on the floor."
-                    , [RampageShotgun], [])
-FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East.")
-ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs.", [Battle_Axe], [Protector])
+STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room. "
+                                                                                "A powerful shotgun lays on the floor.",
+                                                                                [RampageShotgun], [])
+FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East.", [], [])
+ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs. There is "
+                                                               "a Battle Axe.", [Battle_Axe], [Protector])
 BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None, None, "There are rooms to the South and West.")
-BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM", None, "You can go up or go South.",
+BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM", None, "You can go up or go South. "
+                                                                                           "There is an ancient weapon "
+                                                                                           "from the gods",
               [Ancient_Sword], [])
-FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can go East or go South.", [ninja_star], [])
+FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can go East or go South. There is a Ninja"
+                                                                      " Star on the ground.", [ninja_star], [])
 UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWAY", None, None, None,
-                               None, "You can go North or East.", [Karambit], [Boss])
+                               None, "You can go North or East. There is a boss guarding a powerful weapon.",
+                               [Karambit], [Boss])
 
 
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
                     "To the West is the Underground Parking Lot, to the South is an Elevator.", [], [Goblin])
 
-ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up. There is a spear"
-                                                                              "and"
-                                                                              "", [spear],
-                [Demon])
-GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "An Venus Fly Trap blocks the way."
-              , [], [Venus_Fly_Trap])
+ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up. There is a "
+                                                                              "spear.", [spear], [Demon])
+GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "A Giant Venus Fly Trap blocks the way.",
+              [], [Venus_Fly_Trap])
 
 
 # Players
@@ -468,6 +474,9 @@ while playing:
         if pickup == "no":
             print("You may move to another room.")
 
+    if len(player.current_location.characters) > 0:
+        fight = input("There is an enemy in this room, would you like to attack?")
+
     command = input(">_")
     if command.lower() in ["q", "quit", "exit"]:
         playing = False
@@ -484,5 +493,3 @@ while playing:
             print("I can't go that way.")
     else:
         print("Command Not Recognized.")
-    if len(player.current_location.characters) > 0:
-        print("There is an enemy in this room.")
