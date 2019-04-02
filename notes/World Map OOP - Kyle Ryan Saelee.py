@@ -476,6 +476,10 @@ while playing:
 
     if len(player.current_location.characters) > 0:
         fight = input("There is an enemy in this room, would you like to attack?")
+        if fight == "yes":
+            print("You attacked your opponent.")
+        if fight == "no":
+            print("You may move to another room.")
 
     command = input(">_")
     if command.lower() in ["q", "quit", "exit"]:
