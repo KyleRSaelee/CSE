@@ -14,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CSE$Hangman___Kyle_Ryan_Saelee.coverage" NAME="Hangman - Kyle Ryan Saelee Coverage Results" MODIFIED="1547831341219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$States_Notes.coverage" NAME="States Notes Coverage Results" MODIFIED="1549041792116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1554218282324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1554305138788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$New_Class.coverage" NAME="New Class Coverage Results" MODIFIED="1550248984191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Dictionary_World_Map___Kyle_Saelee.coverage" NAME="Dictionary World Map - Kyle Saelee Coverage Results" MODIFIED="1551283254589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes___Kyle_Ryan_Saelee.coverage" NAME="Semester 2 Notes - Kyle Ryan Saelee Coverage Results" MODIFIED="1547137482303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
@@ -44,7 +44,7 @@
     <session id="-94381849">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="41" />
+          <entry key="project.closed" value="42" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -60,7 +60,7 @@
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.47" value="1" />
@@ -78,7 +78,7 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.83" value="2" />
-          <entry key="project.opened" value="45" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -93,12 +93,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="32018" />
+          <entry key="py" value="32327" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="32018" />
+          <entry key="Python" value="32327" />
         </counts>
       </usages-collector>
     </session>
@@ -120,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="381" column="4" selection-start-line="381" selection-start-column="4" selection-end-line="381" selection-end-column="4" />
+            <state relative-caret-position="3167">
+              <caret line="472" column="25" lean-forward="true" selection-start-line="472" selection-start-column="25" selection-end-line="472" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -528,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="381" column="4" selection-start-line="381" selection-start-column="4" selection-end-line="381" selection-end-column="4" />
+        <state relative-caret-position="3167">
+          <caret line="472" column="25" lean-forward="true" selection-start-line="472" selection-start-column="25" selection-end-line="472" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -468,9 +468,16 @@ while playing:
         pickup = input("Would you like to pick it up?")
         if pickup == "yes":
             print("You've picked up the item. You may move to another room.")
+            equip = input("Would you like to equip it?")
+            if equip == "yes":
+                print("")
+            if equip == "no":
+                print("")
+
             player.inventory = player.inventory + player.current_location.items
             print("These are the items in your inventory:")
             player.print_inventory()
+
         if pickup == "no":
             print("You may move to another room.")
 
