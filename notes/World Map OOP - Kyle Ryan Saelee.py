@@ -296,6 +296,11 @@ class Player(object):
         self.current_location = starting_location
         self.damage = 10
         self.inventory = []
+        self.weapon = Steel_Sword
+        self.helmet = Trash_Helmet
+        self.chestplate = Trash_ChestPlate
+        self.leggings = Trash_Leggings
+        self.boots = Trash_Boots
 
     def move(self, new_location):
         """This method moves a character to a new location
@@ -314,10 +319,10 @@ class Player(object):
 
 
 # Armor
-Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 10)
-Trash_ChestPlate = Armor("Sapphire ChestPlate", "Garbage", 10)
-Trash_Leggings = Armor("Sapphire Leggings", "Garbage", 10)
-Trash_Boots = Armor("Sapphire Boots", "Garbage", 10)
+Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 50)
+Trash_ChestPlate = Armor("Sapphire ChestPlate", "Garbage", 50)
+Trash_Leggings = Armor("Sapphire Leggings", "Garbage", 50)
+Trash_Boots = Armor("Sapphire Boots", "Garbage", 50)
 Diamond_Helmet = Armor("Diamond Helmet", "Diamond", 100)
 Diamond_ChestPlate = Armor("Diamond Chestplate", "Diamond", 100)
 Diamond_Leggings = Armor("Diamond Leggings", "Diamond", 100)
@@ -411,7 +416,7 @@ SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, 
 BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "There is a room to the West.", [], [])
 BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "There is a room to the South.", [], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "There are rooms to the South and West.",
-               [], [])
+               [Ancient_ChestPlate, Ancient_Helmet], [])
 
 RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, None, None, "Interesting, there's a "
                                                                                "ladder here. There's also a "
@@ -469,8 +474,10 @@ while playing:
         if pickup == "yes":
             print("You've picked up the item. You may move to another room.")
             equip = input("Would you like to equip it?")
+
             if equip == "yes":
                 print("")
+
             if equip == "no":
                 print("")
 
@@ -484,6 +491,7 @@ while playing:
     if len(player.current_location.characters) > 0:
         fight = input("There is an enemy in this room, would you like to attack?")
         if fight == "yes":
+            player.attack()
             print("You attacked your opponent.")
         if fight == "no":
             print("You may move to another room.")
