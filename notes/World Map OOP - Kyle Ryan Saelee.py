@@ -317,6 +317,44 @@ class Player(object):
     def attack(self):
         self.attack()
 
+    def equip(self)\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            :
+        self.equip()
+
 
 # Armor
 Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 50)
@@ -452,11 +490,12 @@ UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWA
 
 
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
-                    "To the West is the Underground Parking Lot, to the South is an Elevator.", [], [Goblin])
+                    "To the West is the Underground Parking Lot, to the South is an Elevator.", [pistol], [Goblin])
 
 ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up. There is a "
                                                                               "spear.", [spear], [Demon])
-GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "A Giant Venus Fly Trap blocks the way.",
+GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "To the North is a Forest. "
+                                                                     "A Giant Venus Fly Trap blocks the way.",
               [], [Venus_Fly_Trap])
 
 
