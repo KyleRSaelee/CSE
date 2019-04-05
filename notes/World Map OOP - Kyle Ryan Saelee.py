@@ -317,42 +317,7 @@ class Player(object):
     def attack(self):
         self.attack()
 
-    def equip(self)\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            :
+    def equip(self):
         self.equip()
 
 
