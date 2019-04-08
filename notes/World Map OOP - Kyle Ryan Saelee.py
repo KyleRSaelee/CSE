@@ -382,24 +382,25 @@ Gnome = Character("Gnome", 100, dagger, None)
 
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
-                   "DANCE_ROOM", "MASTER_BEDROOM", None, None, "This is the room that you are in right now. "
-                                                               "There are rooms to the North, East, South and West.",
+                   "DANCE_ROOM", "KITCHEN", None, None, "This is the room that you are in right now. "
+                                                        "There are rooms to the North, East, South and West.",
                    [], [])
 
 MASTER_BEDROOM = Room("Master Bedroom", "BALCONY", "BATHROOM",
                       "GAME_ROOM", "MASTER_BEDROOM", None, None, "You are currently in the Master Bedroom. "
                                                                  "There is a room to the North, East, South and West. "
-                      "There is a Sapphire Chestplate, and a oddly looking Gnome.",
-                      [Trash_ChestPlate], [Gnome])
+                      "There is a Diamond Boot, and a oddly looking Gnome.",
+                      [Diamond_Boots], [Gnome])
 
 LIVING_ROOM = Room("Living Room", "BACKYARD", None, "DINING_ROOM", "HALLWAY",
-                   None, None, "You can travel West or South. There are Sapphire Leggings.", [Trash_Leggings],
+                   None, None, "You can travel West or South. There is a Diamond Helmet.", [Diamond_Helmet],
                    [])
 
 HALLWAY = Room("Hallway", None, "LIVING_ROOM", None,
-               "GARDEN", None, None, "To the West is the garden. There are Sapphire Boots.", [Trash_Boots], [])
+               "GARDEN", None, None, "To the West is the garden. There is a Diamond Axe.", [Diamond_Axe], [])
 
-DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD", None, None, "To the west is the Front "
+DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD", None, None, "To the west is the "
+                                                                                            "Front "
                                                                                             "Yard, to the East is the "
                                                                                             "Snack Bar, to the North is"
                                                                                             " the Dining Room.", [], [])
@@ -431,14 +432,14 @@ KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM", None, None, None,
                                                                                  " Look a Golden Apple."
                                                                                  "", [Golden_Apple], [])
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE", None, None, "There are rooms to the North and "
-                                                                                 "West."
+                                                                                 "West. "
                                                                                  "Nice!, a Healing "
                                                                                  "Potion.", [Healing_Potion], [])
 
 GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, "There are rooms the North and East.")
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room. "
                                                                                 "A powerful shotgun lays on the floor.",
-                                                                                [RampageShotgun], [])
+                                                                                [Fire_Shotgun], [])
 FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East.", [], [])
 ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs. There is "
                                                                "a Battle Axe.", [Battle_Axe], [Protector])
@@ -448,7 +449,8 @@ BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_RO
                                                                                            "from the gods",
               [Ancient_Sword], [])
 FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can go East or go South. There is a Ninja"
-                                                                      " Star on the ground.", [ninja_star], [])
+                                                                      " Star on the ground.", [ninja_star],
+              [Hellfire_Armor])
 UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWAY", None, None, None,
                                None, "You can go North or East. There is a boss guarding a powerful weapon.",
                                [Karambit], [Boss])
@@ -469,6 +471,7 @@ player = Player(DINING_ROOM)
 
 playing = True
 directions = ['north', 'east', 'south', 'west', 'up', 'down']
+short_directions = ['n', 'e', 's', 'w', 'u', 'd']
 # Controller
 while playing:
     print(player.current_location.name)
@@ -477,14 +480,6 @@ while playing:
         pickup = input("Would you like to pick it up?")
         if pickup == "yes":
             print("You've picked up the item. You may move to another room.")
-            equip = input("Would you like to equip it?")
-
-            if equip == "yes":
-                print("")
-
-            if equip == "no":
-                print("")
-
             player.inventory = player.inventory + player.current_location.items
             print("These are the items in your inventory:")
             player.print_inventory()
@@ -492,15 +487,14 @@ while playing:
         if pickup == "no":
             print("You may move to another room.")
 
-    if len(player.current_location.characters) > 0:
-        fight = input("There is an enemy in this room, would you like to attack?")
-        if fight == "yes":
-            player.attack()
-            print("You attacked your opponent.")
-        if fight == "no":
-            print("You may move to another room.")
-
     command = input(">_")
+    if command.lower() in ["attack"]:
+        player.attack()
+
+    if command.lower() in short_directions:
+        pos = short_directions.index(command.lower())
+        command = directions[pos]
+
     if command.lower() in ["q", "quit", "exit"]:
         playing = False
     elif command.lower() in directions:

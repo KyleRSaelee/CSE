@@ -196,3 +196,12 @@ print(colors.index("gold"))
 string1 = "turquoise"
 list1 = list(string1)
 print(list1)
+
+
+if len(player.current_location.characters) > 0:
+    fight = input("There is an enemy in this room, would you like to attack?")
+    if fight == "yes":
+        player.attack()
+        print("You attacked your opponent.")
+    if fight == "no":
+        print("You may move to another room.")
