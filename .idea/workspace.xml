@@ -14,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CSE$Hangman___Kyle_Ryan_Saelee.coverage" NAME="Hangman - Kyle Ryan Saelee Coverage Results" MODIFIED="1547831341219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$States_Notes.coverage" NAME="States Notes Coverage Results" MODIFIED="1549041792116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1554736914322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1554824478762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$New_Class.coverage" NAME="New Class Coverage Results" MODIFIED="1550248984191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Dictionary_World_Map___Kyle_Saelee.coverage" NAME="Dictionary World Map - Kyle Saelee Coverage Results" MODIFIED="1551283254589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes___Kyle_Ryan_Saelee.coverage" NAME="Semester 2 Notes - Kyle Ryan Saelee Coverage Results" MODIFIED="1547137482303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
@@ -44,7 +44,7 @@
     <session id="-94381849">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="45" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -63,6 +63,7 @@
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.47" value="2" />
@@ -80,27 +81,27 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.83" value="2" />
-          <entry key="project.opened" value="49" />
+          <entry key="project.opened" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="26" />
+          <entry key="py" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="26" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="33397" />
+          <entry key="py" value="34270" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="33397" />
+          <entry key="Python" value="34270" />
         </counts>
       </usages-collector>
     </session>
@@ -122,35 +123,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="372" column="52" lean-forward="true" selection-start-line="372" selection-start-column="52" selection-end-line="372" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Kyle Ryan Saelee - Mad Lib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Inheritance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="360">
+              <caret line="401" column="107" selection-start-line="401" selection-start-column="107" selection-end-line="401" selection-end-column="107" />
+              <folding>
+                <marker date="1554824551314" expanded="true" signature="8919:9065" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,8 +135,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="3298">
               <caret line="194" column="29" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes/Items - Kyle Ryan Saelee.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1989">
+              <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
             </state>
           </provider>
         </entry>
@@ -183,6 +169,7 @@
       <find>r</find>
       <find>room</find>
       <find>player</find>
+      <find>inventory</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,7 +215,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/notes/Kyle Ryan Saelee - Mad Lib.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/notes/Items - Kyle Ryan Saelee.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -487,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Items - Kyle Ryan Saelee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Dictionary World Map - Kyle Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3519">
@@ -524,15 +504,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="3298">
           <caret line="194" column="29" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Items - Kyle Ryan Saelee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="372" column="52" lean-forward="true" selection-start-line="372" selection-start-column="52" selection-end-line="372" selection-end-column="52" />
+        <state relative-caret-position="360">
+          <caret line="401" column="107" selection-start-line="401" selection-start-column="107" selection-end-line="401" selection-end-column="107" />
+          <folding>
+            <marker date="1554824551314" expanded="true" signature="8919:9065" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

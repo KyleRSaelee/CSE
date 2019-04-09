@@ -1,6 +1,10 @@
 class Room(object):
     def __init__(self, name, north=None, east=None, south=None, west=None, up=None, down=None, description="",
-                 items=[], characters=[]):
+                 items=None, characters=None):
+        if characters is None:
+            characters = []
+        if items is None:
+            items = []
         self.name = name
         self.north = north
         self.east = east
@@ -321,6 +325,13 @@ class Player(object):
         self.equip()
 
 
+class Collectible(Item):
+    def __init__(self, name, value):
+        super(Collectible, self).__init__(name, value)
+        self.name = name
+        self.value = 5000
+
+
 # Armor
 Trash_Helmet = Armor("Sapphire Helmet", "Garbage", 50)
 Trash_ChestPlate = Armor("Sapphire ChestPlate", "Garbage", 50)
@@ -380,9 +391,15 @@ Protector = Character("Sacred Item Protector", 1000, flamethrower, Ancient_Chest
 Demon = Character("Disco Demon",  100, spear, None)
 Gnome = Character("Gnome", 100, dagger, None)
 
+# Collectible
+Diamond = Collectible("Diamond", 50000)
+Ruby = Collectible("Ruby", 50000)
+Emerald = Collectible("Emerald", 50000)
+
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
-                   "DANCE_ROOM", "KITCHEN", None, None, "This is the room that you are in right now. "
+                   "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
+                                                        "find a Diamond, Ruby and Emerald to win the game. "
                                                         "There are rooms to the North, East, South and West.",
                    [], [])
 
@@ -406,7 +423,8 @@ DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD", 
                                                                                             " the Dining Room.", [], [])
 
 GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR", None, None, None, "There are rooms to the East, "
-                                                                                       "North and South.", [], [])
+                                                                                       "North and South. There is a "
+                                                                                       "Ruby.", [Ruby], [])
 
 POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "There is a room to the West. There "
                                                                "is also a monster in the pool.", [], [Water_Monster])
@@ -440,7 +458,8 @@ GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, 
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room. "
                                                                                 "A powerful shotgun lays on the floor.",
                                                                                 [Fire_Shotgun], [])
-FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East.", [], [])
+FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None, None, None, "There is a room to the East. There is an "
+                                                                            "Emerald.", [Emerald], [])
 ATTIC = Room("Attic", None, None, None, None, None, "LIBRARY", "You can go downstairs. There is "
                                                                "a Battle Axe.", [Battle_Axe], [Protector])
 BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None, None, "There are rooms to the South and West.")
@@ -452,8 +471,8 @@ FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None, None, "You can g
                                                                       " Star on the ground.", [ninja_star],
               [Hellfire_Armor])
 UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWAY", None, None, None,
-                               None, "You can go North or East. There is a boss guarding a powerful weapon.",
-                               [Karambit], [Boss])
+                               None, "You can go North or East. There is a boss guarding the Diamond.",
+                               [Diamond], [Boss])
 
 
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
@@ -461,9 +480,9 @@ DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING
 
 ELEVATOR = Room("Elevator", "DARK_HALLWAY", None, None, None, "GARAGE", None, "You can go North or Up. There is a "
                                                                               "spear.", [spear], [Demon])
-GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "To the North is a Forest. "
-                                                                     "A Giant Venus Fly Trap blocks the way.",
-              [], [Venus_Fly_Trap])
+GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None, None, "To the North is a Forest. There is an AncientItem"
+                                                                     ". A Giant Venus Fly Trap blocks the way.",
+              [Ancient_Boots], [Venus_Fly_Trap])
 
 
 # Players
@@ -488,15 +507,16 @@ while playing:
             print("You may move to another room.")
 
     command = input(">_")
-    if command.lower() in ["attack"]:
-        player.attack()
-
     if command.lower() in short_directions:
         pos = short_directions.index(command.lower())
         command = directions[pos]
 
+    if [Diamond, Ruby, Emerald] in player.inventory:
+        player = False
+
     if command.lower() in ["q", "quit", "exit"]:
         playing = False
+
     elif command.lower() in directions:
         try:
             # command = 'north'
