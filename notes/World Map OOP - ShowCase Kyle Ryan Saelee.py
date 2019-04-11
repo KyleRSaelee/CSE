@@ -399,62 +399,92 @@ Emerald = Collectible("Emerald", 50000)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
-                                                        "find a Diamond, Ruby and Emerald to win the game. "
-                                                        "There are rooms to the North, East, South and West.",
+                                                        "find a Diamond, Ruby and Emerald to win the game. \n " 
+                                                        "To the North is the Living Room, \n "
+                                                        "To the East is the MasterBedroom, \n "
+                                                        "To the South is the Dance Room, \n "
+                                                        "To the West is the Kitchen.",
                    [], [])
 
 MASTER_BEDROOM = Room("Master Bedroom", "BALCONY", "BATHROOM",
-                      "GAME_ROOM", "MASTER_BEDROOM", None, None, "You are currently in the Master Bedroom. "
-                                                                 "There is a room to the North, East, South and West. "
-                      "There is a Diamond Boot, and a oddly looking Gnome.",
+                      "GAME_ROOM", "DINING_ROOM", None, None, "You are currently in the Master Bedroom. \n "
+                                                              "To the North is the Balcony, \n "
+                                                              "To the East is the Bathroom, \n "
+                                                              "To the South is the Game Room, \n "
+                                                              "To the West is the Dining Room. \n "
+                                                              "There is a Diamond Boot.",
                       [Diamond_Boots], [Gnome])
 
 LIVING_ROOM = Room("Living Room", "BACKYARD", None, "DINING_ROOM", "HALLWAY",
-                   None, None, "You can travel West or South. There is a Diamond Helmet.", [Diamond_Helmet],
-                   [])
+                   None, None, "You are currently in the Living Room. \n "
+                               "To the North is the Backyard, \n "
+                               "To the South is the Dining Room, \n "
+                               "To the West is the Hallway, \n "
+                               "There is a Diamond Helmet.", [Diamond_Helmet], [])
 
 HALLWAY = Room("Hallway", None, "LIVING_ROOM", None,
-               "GARDEN", None, None, "To the West is the garden. There is a Diamond Axe.", [Diamond_Axe], [])
+               "GARDEN", None, None, "You are currently in the Hallway, \n "
+                                     "To the East is the Living Room, \n "
+                                     "To the West is the Garden, \n "
+                                     "There is a Diamond Axe. \n ", [Diamond_Axe], [])
 
-DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD", None, None, "To the west is the "
-                                                                                            "Front "
-                                                                                            "Yard, to the East is the "
-                                                                                            "Snack Bar, to the North is"
-                                                                                            " the Dining Room.", [], [])
+DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD",
+                  None, None, "You are currently in the Dance Room, \n "
+                              "To the North is the Dining Room, \n "
+                              "To the East is the Snack Bar, \n "
+                              "To the West is the Front Yard. \n ",
+                              [], [])
 
-GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR", None, None, None, "There are rooms to the East, "
-                                                                                       "North and South. There is a "
-                                                                                       "Ruby.", [Ruby], [])
+GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR",
+                 None, None, None, "You are currently in the Game Room, \n "
+                                   "To the East is the Pool, \n "
+                                   "To the South is the Snack Bar, \n "
+                                   "There is a Ruby. \n ", [Ruby], [])
 
-POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "There is a room to the West. There "
-                                                               "is also a monster in the pool.", [], [Water_Monster])
+POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "You are currently at the Pool. \n " 
+                                                               "Looks like a dead end. You must go West to go back. \n",
+                                                               [], [Water_Monster])
 
-SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, None, "There are rooms to the North, "
-                                                                                      "West and South. "
-                                                                                      "OMG look a Flame "
-                                                                                      "Thrower.", [flamethrower],
-                 [])
+SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, None,
+                 "You are currently in the Snack Bar"
+                 "To the North is the Game Room. \n "
+                 "To the East is the Library. \n "
+                 "To the West is the Dance Room. \n "
+                 "OMG look a FlameThrower ", [flamethrower], [])
 
-BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "There is a room to the West.", [], [])
-BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "There is a room to the South.", [], [])
-LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "There are rooms to the South and West.",
-               [Ancient_ChestPlate, Ancient_Helmet], [])
+BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "You are currently in the Bathroom. \n "
+                                                                            "To the West is te Master Bedroom. \n ",
+                                                                            [], [])
+BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You are currently at the Balcony. \n " 
+                                                                          "To the South is the Master Bedroom. \n ",
+               [], [])
+LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "You are currently in the Library. \n "
+                                                                              "To the South is Random Room. \n "
+                                                                              "To the West is the Snack Bar. \n "
+                                                                              "There is an Ancient ChestPlate. \n ",
+               [Ancient_ChestPlate], [])
 
-RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, None, None, "Interesting, there's a "
-                                                                               "ladder here. There's also a "
-                                                                               "room to the North. There is a "
-                                                                               "random sniper in the corner."
-                                                                               "", [sniper2], [])
+RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, "ATTIC",
+                   None, "Interesting, there's a ladder here. \n " 
+                         "You are currently in a Random Room. \n "
+                         "To the East is a teleporter to the Dining Room. \n "
+                         "There's a random sniper in the corner.", [sniper2], [])
 
-KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM", None, None, None, "There are rooms to the East and South"
-                                                                                 " Look a Golden Apple."
-                                                                                 "", [Golden_Apple], [])
-LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE", None, None, "There are rooms to the North and "
-                                                                                 "West. "
-                                                                                 "Nice!, a Healing "
-                                                                                 "Potion.", [Healing_Potion], [])
+KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM",
+               None, None, None, "You are currently in the Kitchen. \n "
+                                 "To the East is the Dining Room. \n "
+                                 "To the South is the Laundry Room. \n "
+                                 "Oh Look a Golden Apple. \n ", [Golden_Apple], [])
+LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE",
+                    None, None, "You are currently in the Laundry Room. \n "
+                                "To the North is the Kitchen. \n "
+                                "To the West is the Garage. \n "
+                                "Nice!, a Healing Potion. \n ", [Healing_Potion], [])
 
-GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None, None, None, "There are rooms the North and East.")
+GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None,
+              None, None, "You are currently in the Garage. \n "
+                          "To the North is the Storage Room. \n "
+                          "To the East is the ")
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None, "BUNKER", "A hatch leading down to a dark room. "
                                                                                 "A powerful shotgun lays on the floor.",
                                                                                 [Fire_Shotgun], [])
