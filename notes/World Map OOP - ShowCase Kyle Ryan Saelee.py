@@ -395,11 +395,13 @@ Gnome = Character("Gnome", 100, dagger, None)
 Diamond = Collectible("Diamond", 50000)
 Ruby = Collectible("Ruby", 50000)
 Emerald = Collectible("Emerald", 50000)
-
+Sapphire = Collectible("Sapphire", 50000)
+Garnet = Collectible("Garnet", 50000)
 
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
-                                                        "find a Diamond, Ruby and Emerald to win the game. \n " 
+                                                        "find a Diamond, Ruby, Emerald, Sapphire and Garnet "
+                                                        "to win the game. \n " 
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
@@ -439,22 +441,23 @@ GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR",
                                    "There is a Ruby. \n ", [Ruby], [])
 
 POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "You are currently at the Pool. \n " 
-                                                               "Looks like a dead end. You must go West to go back. \n",
-                                                               [], [Water_Monster])
+                                                               "Looks like a dead end. You must go West to go back. \n"
+                                                               "There is a Sapphire Jewel in the room. \n. ",
+                                                               [Sapphire], [Water_Monster])
 
 SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, None,
                  "You are currently in the Snack Bar. \n "
                  "To the North is the Game Room. \n "
                  "To the East is the Library. \n "
-                 "To the West is the Dance Room. \n "
-                 "OMG look a FlameThrower. \n ", [flamethrower], [])
+                 "To the West is the Dance Room. \n ", [flamethrower], [])
 
 BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "You are currently in the Bathroom. \n "
                                                                             "To the West is te Master Bedroom. \n ",
                                                                             [], [])
 BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You are currently at the Balcony. \n " 
-                                                                          "To the South is the Master Bedroom. \n ",
-               [], [])
+                                                                          "To the South is the Master Bedroom. \n "
+                                                                          "There is a Garnet Jewel in the room. \n ",
+               [Garnet], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "You are currently in the Library. \n "
                                                                               "To the South is Random Room. \n "
                                                                               "To the West is the Snack Bar. \n "
@@ -566,7 +569,8 @@ while playing:
         pos = short_directions.index(command.lower())
         command = directions[pos]
 
-    if [Diamond, Ruby, Emerald] in player.inventory:
+    if [Diamond, Ruby, Emerald, Sapphire, Garnet] in player.inventory:
+        print("Congratulations you have won the game!")
         player = False
 
     if command.lower() in ["q", "quit", "exit"]:
