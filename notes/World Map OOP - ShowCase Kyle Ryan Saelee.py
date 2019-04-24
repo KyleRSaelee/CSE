@@ -460,8 +460,7 @@ BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You a
                [Garnet], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "You are currently in the Library. \n "
                                                                               "To the South is Random Room. \n "
-                                                                              "To the West is the Snack Bar. \n "
-                                                                              "There is an Ancient ChestPlate. \n ",
+                                                                              "To the West is the Snack Bar. \n ",
                [Ancient_ChestPlate], [])
 
 RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, "ATTIC",
