@@ -525,7 +525,6 @@ UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWA
                                      "To the East is a Dark Hallway. \n "
                                      "OMG! Look a DIAMOND! \n ", [Diamond], [Boss])
 
-
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
                     "You are currently in the Dark Hallway. \n "
                     "To the South is an Elevator. \n "
