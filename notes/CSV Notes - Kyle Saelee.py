@@ -57,3 +57,7 @@ print(''.join(reversed("7867220926511430")))
 #        # old_number = int(row[0]) + 1
 #        old_number = row[0]
 #        print(old_number)
+
+reversed_version = reverse(num)
+
+for i in reversed_version:
