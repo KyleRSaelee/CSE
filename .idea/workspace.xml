@@ -68,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="62" selection-start-line="62" selection-end-line="62" selection-end-column="26" />
+            <state relative-caret-position="185">
+              <caret line="13" selection-start-line="13" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -77,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="357">
+              <caret line="21" column="52" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -346,12 +346,13 @@
       <workItem from="1556290208772" duration="3202000" />
       <workItem from="1556549481157" duration="6677000" />
       <workItem from="1556722190618" duration="6789000" />
-      <workItem from="1556899211811" duration="2614000" />
+      <workItem from="1556899211811" duration="2840000" />
+      <workItem from="1557154240495" duration="2959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20266000" />
+    <option name="totallyTimeSpent" value="23451000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,8 +372,8 @@
       <window_info id="Structure" order="2" weight="0.24946696" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" weight="0.43445286" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39873418" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49853587" visible="true" weight="0.43445286" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
@@ -410,7 +411,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CSE$CSV_Notes___Kyle_Saelee.coverage" NAME="CSV Notes - Kyle Saelee Coverage Results" MODIFIED="1556723421372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1556206222104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Validator___Kyle_Ryan_Saelee.coverage" NAME="Validator - Kyle Ryan Saelee Coverage Results" MODIFIED="1556902041016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Validator___Kyle_Ryan_Saelee.coverage" NAME="Validator - Kyle Ryan Saelee Coverage Results" MODIFIED="1557157357541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/notes/Kyle Ryan Saelee - Guess Game.py">
@@ -534,15 +535,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="62" selection-start-line="62" selection-end-line="62" selection-end-column="26" />
+        <state relative-caret-position="185">
+          <caret line="13" selection-start-line="13" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="357">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="52" />
         </state>
       </provider>
     </entry>
