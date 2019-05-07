@@ -47,47 +47,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8942">
-              <caret line="526" selection-start-line="526" selection-end-line="526" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/World Map OOP - ShowCase Kyle Ryan Saelee.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="13" selection-start-line="13" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="372">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Book1.csv">
+        <entry file="file://$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-end-line="4" selection-end-column="16" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/Sales Records (1).csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="255">
+              <caret line="42" column="61" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -143,6 +125,7 @@
         <option value="$PROJECT_DIR$/notes/MyNewFile.csv" />
         <option value="$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py" />
         <option value="$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py" />
+        <option value="$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py" />
       </list>
     </option>
   </component>
@@ -179,16 +162,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Sales Records (1).csv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tfbk\Documents\GitHub\CSE\notes" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tfbk\Documents\GitHub\CSE\notes" />
     </key>
   </component>
@@ -347,12 +330,13 @@
       <workItem from="1556549481157" duration="6677000" />
       <workItem from="1556722190618" duration="6789000" />
       <workItem from="1556899211811" duration="2840000" />
-      <workItem from="1557154240495" duration="2959000" />
+      <workItem from="1557154240495" duration="3126000" />
+      <workItem from="1557240616859" duration="2148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23451000" />
+    <option name="totallyTimeSpent" value="25766000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +351,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" weight="0.24200426" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.24200426" />
       <window_info id="Favorites" order="1" sideWeight="0.50163937" side_tool="true" weight="0.24281392" />
       <window_info id="Structure" order="2" weight="0.24946696" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,7 +395,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CSE$CSV_Notes___Kyle_Saelee.coverage" NAME="CSV Notes - Kyle Saelee Coverage Results" MODIFIED="1556723421372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1556206222104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Validator___Kyle_Ryan_Saelee.coverage" NAME="Validator - Kyle Ryan Saelee Coverage Results" MODIFIED="1557157357541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Validator___Kyle_Ryan_Saelee.coverage" NAME="Validator - Kyle Ryan Saelee Coverage Results" MODIFIED="1557243484229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/notes/Kyle Ryan Saelee - Guess Game.py">
@@ -512,9 +496,16 @@
     <entry file="file://$PROJECT_DIR$/notes/MyNewFile.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Book1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8942">
+        <state relative-caret-position="440">
           <caret line="526" selection-start-line="526" selection-end-line="526" />
         </state>
       </provider>
@@ -526,24 +517,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Book1.csv">
+    <entry file="file://$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py">
+    <entry file="file://$USER_HOME$/Downloads/Sales Records (1).csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="255">
+          <caret line="42" column="61" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="13" selection-start-line="13" selection-end-line="15" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="52" />
+        <state relative-caret-position="372">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
