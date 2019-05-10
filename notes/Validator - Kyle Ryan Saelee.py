@@ -2,12 +2,12 @@ import csv
 test_num = "4556737586899855"
 
 
-def reverse(num: str):
-    return num[::-1]
+def reverse(number: str):
+    return number[::-1]
 
 
-def remove_last_num(num: str):
-    remaining_nums = num[0:15]
+def remove_last_num(number: str):
+    remaining_nums = number[0:15]
     print(remaining_nums)
     return True
 
