@@ -16,5 +16,13 @@ print(colors_list)
 colors_list.pop(0)
 print(colors_list)
 
+if item_type == "Fruits":
+    print("Total profit of fruits sold is %s. \n " % profit)
+
+if item_type == "Meat":
+    print("Total profit of meat sold is %s. \n " % profit)
+if item_type == "Beverages":
+    print()
+
 
 
