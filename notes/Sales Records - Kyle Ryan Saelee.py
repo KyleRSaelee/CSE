@@ -68,5 +68,3 @@ with open("Sales Records.csv", 'r') as old_csv:
     print("Total profit of vegetables: $%s" % sum(vegetables_profit))
     print("Total profit of baby food: $%s" % sum(baby_food_profit))
     print("Total profit of cereal: $%s" % sum(cereal_profit))
-
-
