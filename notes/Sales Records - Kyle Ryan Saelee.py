@@ -4,6 +4,7 @@ import csv
 with open("Sales Records.csv", 'r') as old_csv:
     reader = csv.reader(old_csv)
     print("Processing...")
+    sum_profit = {}
     clothes_profit = []
     meat_profit = []
     cosmetic_profit = []
@@ -19,7 +20,17 @@ with open("Sales Records.csv", 'r') as old_csv:
     for row in reader:
         item_type = row[2]
         units_sold = row[8]
-        total_profit = row[13]
+
+        if row[0] == "Region":
+            continue
+        item_sold = row[2]
+        total_profit = round(float(row[13]), 2)
+
+        if item_sold not in sum_profit:
+            sum_profit[item_sold] = total_profit
+        else:
+            sum_profit[item_sold] += total_profit
+
         if item_type == "Clothes":
             clothes_profit.append(float(total_profit))
 
@@ -68,3 +79,5 @@ with open("Sales Records.csv", 'r') as old_csv:
     print("Total profit of vegetables: $%s" % sum(vegetables_profit))
     print("Total profit of baby food: $%s" % sum(baby_food_profit))
     print("Total profit of cereal: $%s" % sum(cereal_profit))
+    print("The item that made the highest profit was: %s" %
+          (max(sum_profit, key=sum_profit.get) + " with a total of $" + str(max(sum_profit.values()))))

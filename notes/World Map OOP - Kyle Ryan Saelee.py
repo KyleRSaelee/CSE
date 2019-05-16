@@ -401,7 +401,10 @@ Garnet = Collectible("Garnet", 50000)
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
                                                         "find a Diamond, Ruby, Emerald, Sapphire and Garnet "
-                                                        "to win the game. \n " 
+                                                        "to win the game. \n"
+                                                        "You can move by typing north, east, south, west or sometimes "
+                                                        "up or down. \n"
+                                                        "You could also move by typing n, e, s, w, u, d. \n " 
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
