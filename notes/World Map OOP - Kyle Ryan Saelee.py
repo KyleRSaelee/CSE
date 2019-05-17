@@ -369,7 +369,7 @@ Shotgun = Gun("Rampage Shotgun", 20, 300)
 Fire_Shotgun = Gun("Dragon Breath Shotgun", 100, 500)
 pistol = Gun("Pistol", 10, 400)
 sniper1 = Gun("Koshka", 150, 1000)
-sniper2 = Gun("Paladin", 200, 1000)
+sniper2 = Gun("Paladin Sniper", 200, 1000)
 assault_rifle = Gun("Mysterious Assault Rifle", 500, 10000)
 flamethrower = Gun("Flamethrower", 100, 10000)
 
