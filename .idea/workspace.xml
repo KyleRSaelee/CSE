@@ -59,16 +59,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Semester 2 Notes - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="334">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-468">
               <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
@@ -76,6 +76,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Sales Records.csv">
+          <provider editor-type-id="LargeFileEditor">
+            <state relative-caret-position="136">
+              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="csv-data-editor">
             <state>
               <format>
@@ -92,18 +97,22 @@
               </format>
             </state>
           </provider>
-          <provider editor-type-id="LargeFileEditor">
-            <state relative-caret-position="136">
-              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1697">
+              <caret line="462" column="21" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
+        <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="407" column="13" selection-start-line="407" selection-start-column="13" selection-end-line="407" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -147,7 +156,6 @@
         <option value="$PROJECT_DIR$/notes/Creating Objects.py" />
         <option value="$PROJECT_DIR$/notes/Inheritance.py" />
         <option value="$PROJECT_DIR$/notes/Dictionary World Map - Kyle Saelee.py" />
-        <option value="$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py" />
         <option value="$PROJECT_DIR$/notes/Items - Kyle Ryan Saelee.py" />
         <option value="$PROJECT_DIR$/notes/Basic Python Notes.py" />
         <option value="$USER_HOME$/Downloads/Book1.csv" />
@@ -158,9 +166,10 @@
         <option value="$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/notes/Validator - Kyle Ryan Saelee.py" />
-        <option value="$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py" />
         <option value="$PROJECT_DIR$/notes/Semester 2 Notes - Kyle Ryan Saelee.py" />
         <option value="$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py" />
+        <option value="$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py" />
+        <option value="$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py" />
       </list>
     </option>
   </component>
@@ -197,7 +206,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/notes/Dictionary World Map - Kyle Saelee.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -223,8 +232,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Sales Records - Kyle Ryan Saelee">
-    <configuration name="CSV Notes - Kyle Ryan Saelee" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.World Map OOP - Kyle Ryan Saelee">
+    <configuration name="Hangman - Kyle Ryan Saelee" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -237,7 +246,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/CSV Notes - Kyle Ryan Saelee" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/Hangman - Kyle Ryan Saelee.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -246,7 +255,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CSV Notes - Kyle Saelee" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Hangman - Kyle Saelee" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,7 +268,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/CSV Notes - Kyle Saelee.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,18 +345,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.World Map OOP - Kyle Ryan Saelee" />
-      <item itemvalue="Python.CSV Notes - Kyle Ryan Saelee" />
-      <item itemvalue="Python.CSV Notes - Kyle Saelee" />
       <item itemvalue="Python.Validator - Kyle Ryan Saelee" />
       <item itemvalue="Python.Sales Records - Kyle Ryan Saelee" />
+      <item itemvalue="Python.Hangman - Kyle Ryan Saelee" />
+      <item itemvalue="Python.Hangman - Kyle Saelee" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Sales Records - Kyle Ryan Saelee" />
         <item itemvalue="Python.World Map OOP - Kyle Ryan Saelee" />
+        <item itemvalue="Python.Hangman - Kyle Saelee" />
+        <item itemvalue="Python.Hangman - Kyle Ryan Saelee" />
+        <item itemvalue="Python.Sales Records - Kyle Ryan Saelee" />
         <item itemvalue="Python.Validator - Kyle Ryan Saelee" />
-        <item itemvalue="Python.CSV Notes - Kyle Saelee" />
-        <item itemvalue="Python.CSV Notes - Kyle Ryan Saelee" />
       </list>
     </recent_temporary>
   </component>
@@ -374,12 +383,13 @@
       <workItem from="1557758967290" duration="3339000" />
       <workItem from="1557845337879" duration="3349000" />
       <workItem from="1557931815027" duration="3184000" />
-      <workItem from="1558018171384" duration="3247000" />
+      <workItem from="1558018171384" duration="3332000" />
+      <workItem from="1558108930763" duration="2301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48085000" />
+    <option name="totallyTimeSpent" value="50471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,9 +402,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.26332623" />
       <window_info id="Favorites" order="1" sideWeight="0.50163937" side_tool="true" weight="0.24281392" />
       <window_info id="Structure" order="2" weight="0.24946696" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,10 +469,12 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSE$Hangman___Kyle_Ryan_Saelee.coverage" NAME="Hangman - Kyle Ryan Saelee Coverage Results" MODIFIED="1558110690268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$CSV_Notes___Kyle_Saelee.coverage" NAME="CSV Notes - Kyle Saelee Coverage Results" MODIFIED="1556723421372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1558019070883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$World_Map_OOP___Kyle_Ryan_Saelee.coverage" NAME="World Map OOP - Kyle Ryan Saelee Coverage Results" MODIFIED="1558110804098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Validator___Kyle_Ryan_Saelee.coverage" NAME="Validator - Kyle Ryan Saelee Coverage Results" MODIFIED="1557504584989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Sales_Records___Kyle_Ryan_Saelee.coverage" NAME="Sales Records - Kyle Ryan Saelee Coverage Results" MODIFIED="1558021373265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Sales_Records___Kyle_Ryan_Saelee.coverage" NAME="Sales Records - Kyle Ryan Saelee Coverage Results" MODIFIED="1558021512433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Hangman___Kyle_Saelee.coverage" NAME="Hangman - Kyle Saelee Coverage Results" MODIFIED="1558110759097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/notes/Kyle Ryan Saelee - Guess Game.py">
@@ -491,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Ryan Saelee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Object Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-215">
@@ -516,13 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -600,21 +597,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Semester 2 Notes - Kyle Ryan Saelee.py">
+    <entry file="file://$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        <state relative-caret-position="-468">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
+    <entry file="file://$PROJECT_DIR$/notes/Semester 2 Notes - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="407" column="13" selection-start-line="407" selection-start-column="13" selection-end-line="407" selection-end-column="13" />
+        <state relative-caret-position="334">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Ryan Saelee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Hangman - Kyle Saelee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Sales Records.csv">
+      <provider editor-type-id="LargeFileEditor">
+        <state relative-caret-position="136">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="csv-data-editor">
         <state>
           <format>
@@ -631,16 +647,11 @@
           </format>
         </state>
       </provider>
-      <provider editor-type-id="LargeFileEditor">
-        <state relative-caret-position="136">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Sales Records - Kyle Ryan Saelee.py">
+    <entry file="file://$PROJECT_DIR$/notes/World Map OOP - Kyle Ryan Saelee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="-1697">
+          <caret line="462" column="21" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="21" />
         </state>
       </provider>
     </entry>

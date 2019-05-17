@@ -476,13 +476,13 @@ KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM",
                None, None, None, "You are currently in the Kitchen. \n "
                                  "To the East is the Dining Room. \n "
                                  "To the South is the Laundry Room. \n "
-                                 "Oh Look a Golden Apple. \n ", [Golden_Apple], [])
+                                 , [Golden_Apple], [])
 
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE",
                     None, None, "You are currently in the Laundry Room. \n "
                                 "To the North is the Kitchen. \n "
-                                "To the West is the Garage. \n "
-                                "Nice!, a Healing Potion. \n ", [Healing_Potion], [])
+                                "To the West is the Garage. \n ",
+                    [Healing_Potion], [])
 
 GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None,
               None, None, "You are currently in the Garage. \n "
@@ -556,7 +556,7 @@ while playing:
     print(player.current_location.description)
     if len(player.current_location.items) > 0:
         pickup = input("There is an item, would you like to pick it up?")
-        if pickup == "yes":
+        if pickup == "yes" or "y":
             print("You've picked up the item. You may move to another room.")
             player.inventory = player.inventory + player.current_location.items
             player.current_location.items = []
