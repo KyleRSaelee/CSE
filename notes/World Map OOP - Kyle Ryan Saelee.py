@@ -475,8 +475,8 @@ RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, "ATTIC",
 KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM",
                None, None, None, "You are currently in the Kitchen. \n "
                                  "To the East is the Dining Room. \n "
-                                 "To the South is the Laundry Room. \n "
-                                 , [Golden_Apple], [])
+                                 "To the South is the Laundry Room. \n ",
+                                 [Golden_Apple], [])
 
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE",
                     None, None, "You are currently in the Laundry Room. \n "
@@ -492,8 +492,8 @@ GARAGE = Room("Garage", "STORAGE_ROOM", "LAUNDRY_ROOM", None, None,
 STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None,
                     "BUNKER", "You are currently in the Storage Room. \n "
                               "There is a hatch leading down to a dark room. \n "
-                              "To the South is the Garage. \n "
-                              "A powerful shotgun lays on the floor. \n ", [Fire_Shotgun], [])
+                              "To the South is the Garage. \n ",
+                              [Fire_Shotgun], [])
 
 FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None,
                   None, None, "You are currently in the Front Yard. \n "
@@ -503,7 +503,8 @@ FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None,
 ATTIC = Room("Attic", None, None, None, None,
              None, "LIBRARY", "You are currently in the Attic. \n "
                               "You can go downstairs back to the Library. \n "
-                              "There is a Battle Axe. \n ", [Battle_Axe], [Protector])
+                              "There is a piece of paper on the ground that says to type in 'peter.' \n ",
+             [], [Protector])
 
 BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None,
                 None, "You are currently in the Backyard. \n "
@@ -513,8 +514,8 @@ BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None,
 BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM",
               None, "You are currently in the Bunker. \n "
                     "To the South is the Underground Parking Lot. \n "
-                    "Climb back up the ladder to go back to the Storage Room. \n "
-                    "There is an ancient weapon from the gods. \n ", [Ancient_Sword], [])
+                    "Climb back up the ladder to go back to the Storage Room. \n ",
+                    [Ancient_Sword], [])
 
 FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None,
               None, "You are currently in the Forest. \n "
@@ -524,8 +525,8 @@ FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None,
 UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWAY", None, None, None,
                                None, "You are currently in the Underground Parking Lot. \n "
                                      "To the North is the Bunker. \n "
-                                     "To the East is a Dark Hallway. \n "
-                                     "OMG! Look a DIAMOND! \n ", [Diamond], [Boss])
+                                     "To the East is a Dark Hallway. \n ",
+                                     [Diamond], [Boss])
 
 
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
@@ -556,7 +557,7 @@ while playing:
     print(player.current_location.description)
     if len(player.current_location.items) > 0:
         pickup = input("There is an item, would you like to pick it up?")
-        if pickup == "yes" or "y":
+        if pickup == "yes" or "y" or "ye" or "yah":
             print("You've picked up the item. You may move to another room.")
             player.inventory = player.inventory + player.current_location.items
             player.current_location.items = []
@@ -577,6 +578,47 @@ while playing:
 
     if command.lower() in ["q", "quit", "exit"]:
         playing = False
+
+    if command.lower() in ["peter"]:
+        print("░░░░░░░░░░░░░░░░▄▄▄███████▄▄░░░░░░░░░░░░")
+        print("░░░░░░░░░░░░░░▄███████████████▄░░░░░░░░░")
+        print("░░░░░░░░░░░░░█▀▀▀▄░░░░█████▀▀███▄░░░░░░░")
+        print("░░░░░░░░░░░░█░░▄░░█▄▄█░░░░▀▄▄█████░░░░░░")
+        print("░░░░░░░░░▄▀▀▀▄▄▀▀▀▀▀▀▄░░▀░░█▀▀▀░▀██░░░░░")
+        print("░░░░░░░▄▀░░░░░█░░░░░░▀▄▄▄▄█░░░░░░░▀▄░░░░")
+        print("░░░░░░▄▀░░░░░▄█▀▄▄▄▄░░░░░▄░░░░░░░░░█░░░░")
+        print("░░░░░░█░░░░░▄█▀▄▄▄▄▄▄▄▄▄▀▀░░░░░░░░░▀▄░░░")
+        print("░░░░░█░░░░░░▀█▄░░░░░░░░░░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░░░▀▄░░░░░░░░░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░░░▄█░░░░░░░░░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░▄▀░░░░░░░░▀▄░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░▀▄░░░▄░░░░░█░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░░░▀▀▀▀▀█▄▄▀░░░░░░░░░░░░░█░░░")
+        print("░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄██░░")
+        print("░░░░░█▄░░░░░░░░░░░░░░░░░░░░░░░░░░▄▀▀▄▀▄▄")
+        print("░░░░▄█▀▄░░░░░░░░░░░░░░░░░░░░░░▄▄▀░░▄▀░░░")
+        print("░▄░▀░░█░▀▄▄░░░░░░░░░░░░░░░▄▄▄▀░░░▄▀░░░░░")
+        print("▀░░░░░░▀▄░░▀▄░░░░░░░░▄▄▄▀▀░░░░▄▀▀░░░░░░░")
+
+    if command.lower() in ["gnome"]:
+        print("OOOOOH")
+        print("⣿⣿⣿⣿⣿⠟⠉⠁⠄⠄⠄⠈⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⢿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣏⠄⡠⡤⡤⡤⡤⡤⡤⡠⡤⡤⣸⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣗⢝⢮⢯⡺⣕⢡⡑⡕⡍⣘⢮⢿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⡧⣝⢮⡪⡪⡪⡎⡎⡮⡲⣱⣻⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⠟⠁⢸⡳⡽⣝⢝⢌⢣⢃⡯⣗⢿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⠟⠁⠄⠄⠄⠹⡽⣺⢽⢽⢵⣻⢮⢯⠟⠿⠿⢿⣿⣿⣿⣿⣿")
+        print("⡟⢀⠄⠄⠄⠄⠄⠙⠽⠽⡽⣽⣺⢽⠝⠄⠄⢰⢸⢝⠽⣙⢝⢿")
+        print("⡄⢸⢹⢸⢱⢘⠄⠄⠄⠄⠄⠈⠄⠄⠄⣀⠄⠄⣵⣧⣫⣶⣜⣾")
+        print("⣧⣬⣺⠸⡒⠬⡨⠄⠄⠄⠄⠄⠄⠄⣰⣿⣿⣿⣿⣿⣷⣽⣿⣿")
+        print("⣿⣿⣿⣷⠡⠑⠂⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣄⠠⢀⢀⢀⡀⡀⠠⢀⢲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⢐⢀⠂⢄⠇⠠⠈⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣧⠄⠠⠈⢈⡄⠄⢁⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⡀⠠⠐⣼⠇⠄⡀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣯⠄⠄⡀⠈⠂⣀⠄⢀⠄⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿")
 
     elif command.lower() in directions:
         try:
