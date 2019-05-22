@@ -401,10 +401,14 @@ Garnet = Collectible("Garnet", 50000)
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
                                                         "find a Diamond, Ruby, Emerald, Sapphire and Garnet "
-                                                        "to win the game. \n"
+                                                        "to win the game. \n "
+                                                        "You can also find all the items in the game to receive an "
+                                                        "achievement. \n "
                                                         "You can move by typing north, east, south, west or sometimes "
-                                                        "up or down. \n"
-                                                        "You could also move by typing n, e, s, w, u, d. \n " 
+                                                        "up or down. \n "
+                                                        "You could also move by typing n, e, s, w, u, d. \n "
+                                                        "If asked to pick up an item. You can reply with 'y', 'yes', "
+                                                        "or 'no'. \n " 
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
@@ -440,12 +444,11 @@ DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD",
 GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR",
                  None, None, None, "You are currently in the Game Room. \n "
                                    "To the East is the Pool. \n "
-                                   "To the South is the Snack Bar. \n "
-                                   "There is a Ruby. \n ", [Ruby], [])
+                                   "To the South is the Snack Bar. \n ",
+                                   [Ruby], [])
 
 POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "You are currently at the Pool. \n " 
-                                                               "Looks like a dead end. You must go West to go back. \n"
-                                                               "There is a Sapphire Jewel in the room. \n. ",
+                                                               "Looks like a dead end. You must go West to go back. \n",
                                                                [Sapphire], [Water_Monster])
 
 SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, None,
@@ -458,9 +461,8 @@ BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "You
                                                                             "To the West is te Master Bedroom. \n ",
                                                                             [], [])
 BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You are currently at the Balcony. \n " 
-                                                                          "To the South is the Master Bedroom. \n "
-                                                                          "There is a Garnet Jewel in the room. \n ",
-               [Garnet], [])
+                                                                          "To the South is the Master Bedroom. \n ",
+                                                                          [Garnet], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "You are currently in the Library. \n "
                                                                               "To the South is Random Room. \n "
                                                                               "To the West is the Snack Bar. \n ",
@@ -469,8 +471,8 @@ LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "Y
 RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, "ATTIC",
                    None, "Interesting, there's a ladder here. \n " 
                          "You are currently in a Random Room. \n "
-                         "To the East is a teleporter to the Dining Room. \n "
-                         "There's a random sniper in the corner. \n ", [sniper2], [])
+                         "To the East is a teleporter to the Dining Room. \n ",
+                         [sniper2], [])
 
 KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM",
                None, None, None, "You are currently in the Kitchen. \n "
@@ -497,8 +499,8 @@ STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None,
 
 FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None,
                   None, None, "You are currently in the Front Yard. \n "
-                              "To the East is the Dance Room. \n "
-                              "There is an Emerald. \n ", [Emerald], [])
+                              "To the East is the Dance Room. \n ",
+                              [Emerald], [])
 
 ATTIC = Room("Attic", None, None, None, None,
              None, "LIBRARY", "You are currently in the Attic. \n "
@@ -514,7 +516,8 @@ BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None,
 BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM",
               None, "You are currently in the Bunker. \n "
                     "To the South is the Underground Parking Lot. \n "
-                    "Climb back up the ladder to go back to the Storage Room. \n ",
+                    "Climb back up the ladder to go back to the Storage Room. \n "
+                    "Type in 'gnome' for a meme to appear. \n ",
                     [Ancient_Sword], [])
 
 FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None,
@@ -620,9 +623,12 @@ while playing:
         print("⣿⣿⣿⣿⣯⠄⠄⡀⠈⠂⣀⠄⢀⠄⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿")
         print("⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿")
 
+    if command.lower() in ["cheat"]:
+        print("Congratulations you beat the game without even trying. Not only that you achieved nothing.")
+        playing = False
+
     elif command.lower() in directions:
         try:
-            # command = 'north'
             room_name = getattr(player.current_location, command)
             room_object = globals()[room_name]
 
@@ -632,4 +638,15 @@ while playing:
         except AttributeError:
             print("I can't go that way.")
     else:
-        print("Command Not Recognized.")
+        print("⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿")
+        print("⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿")
+        print("⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿")
+        print("Command Not Recognized. \n ")

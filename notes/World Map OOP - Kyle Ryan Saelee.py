@@ -401,10 +401,14 @@ Garnet = Collectible("Garnet", 50000)
 DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                    "DANCE_ROOM", "KITCHEN", None, None, "Welcome! This is the room that you are in right now. You must "
                                                         "find a Diamond, Ruby, Emerald, Sapphire and Garnet "
-                                                        "to win the game. \n"
+                                                        "to win the game. \n "
+                                                        "You can also find all the items in the game to receive an "
+                                                        "achievement. \n "
                                                         "You can move by typing north, east, south, west or sometimes "
-                                                        "up or down. \n"
-                                                        "You could also move by typing n, e, s, w, u, d. \n " 
+                                                        "up or down. \n "
+                                                        "You could also move by typing n, e, s, w, u, d. \n "
+                                                        "If asked to pick up an item. You can reply with 'y', 'yes', "
+                                                        "or 'no'. \n " 
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
@@ -512,7 +516,8 @@ BACKYARD = Room("Backyard", None, None, "LIVING_ROOM", "FOREST", None,
 BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_ROOM",
               None, "You are currently in the Bunker. \n "
                     "To the South is the Underground Parking Lot. \n "
-                    "Climb back up the ladder to go back to the Storage Room. \n ",
+                    "Climb back up the ladder to go back to the Storage Room. \n "
+                    "Type in 'gnome' for a meme to appear. \n ",
                     [Ancient_Sword], [])
 
 FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None,
@@ -618,9 +623,12 @@ while playing:
         print("⣿⣿⣿⣿⣯⠄⠄⡀⠈⠂⣀⠄⢀⠄⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿")
         print("⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿")
 
+    if command.lower() in ["cheat"]:
+        print("Congratulations you beat the game without even trying. Not only that you achieved nothing.")
+        playing = False
+
     elif command.lower() in directions:
         try:
-            # command = 'north'
             room_name = getattr(player.current_location, command)
             room_object = globals()[room_name]
 
@@ -630,4 +638,15 @@ while playing:
         except AttributeError:
             print("I can't go that way.")
     else:
-        print("Command Not Recognized.")
+        print("⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿")
+        print("⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿")
+        print("⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿")
+        print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿")
+        print("Command Not Recognized. \n ")
