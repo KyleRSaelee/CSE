@@ -377,7 +377,6 @@ flamethrower = Gun("Flamethrower", 100, 10000)
 Golden_Apple = Consumable("Golden Apple", 50, 100, 0, 10)
 Healing_Potion = Consumable("Healing Potion", 50, 100, 0, 1)
 
-
 # Characters
 Boss = Character("Boss", 1000, Shotgun, Diamond_Helmet)
 Ninja = Character("Ninja", 500, ninja_star, None)
@@ -388,7 +387,7 @@ Soldier = Character("Soldier", 150, Fire_Shotgun, None)
 Water_Monster = Character("Water Monster", 100, None, None)
 Venus_Fly_Trap = Character("Venus Fly Trap", 100, bow, None)
 Protector = Character("Sacred Item Protector", 1000, flamethrower, Ancient_ChestPlate)
-Demon = Character("Disco Demon",  100, spear, None)
+Demon = Character("Disco Demon", 100, spear, None)
 Gnome = Character("Gnome", 100, dagger, None)
 
 # Collectible
@@ -408,7 +407,8 @@ DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                                                         "up or down. \n "
                                                         "You could also move by typing n, e, s, w, u, d. \n "
                                                         "If asked to pick up an item. You can reply with 'y', 'yes', "
-                                                        "or 'no'. \n " 
+                                                        "or 'no'. \n \n "
+
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
@@ -439,17 +439,17 @@ DANCE_ROOM = Room("Dance Room", "DINING_ROOM", "SNACK_BAR", None, "FRONT_YARD",
                               "To the North is the Dining Room. \n "
                               "To the East is the Snack Bar. \n "
                               "To the West is the Front Yard. \n ",
-                              [], [])
+                  [], [])
 
 GAME_ROOM = Room("Game Room", "MASTER_BEDROOM", "POOL", "SNACK_BAR",
                  None, None, None, "You are currently in the Game Room. \n "
                                    "To the East is the Pool. \n "
                                    "To the South is the Snack Bar. \n ",
-                                   [Ruby], [])
+                 [Ruby], [])
 
-POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "You are currently at the Pool. \n " 
+POOL = Room("Pool", None, None, None, "GAME_ROOM", None, None, "You are currently at the Pool. \n "
                                                                "Looks like a dead end. You must go West to go back. \n",
-                                                               [Sapphire], [Water_Monster])
+            [Sapphire], [Water_Monster])
 
 SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, None,
                  "You are currently in the Snack Bar. \n "
@@ -459,26 +459,26 @@ SNACK_BAR = Room("Snack Bar", "GAME_ROOM", "LIBRARY", None, "DANCE_ROOM", None, 
 
 BATHROOM = Room("Bathroom", None, None, None, "MASTER_BEDROOM", None, None, "You are currently in the Bathroom. \n "
                                                                             "To the West is te Master Bedroom. \n ",
-                                                                            [], [])
-BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You are currently at the Balcony. \n " 
+                [], [])
+BALCONY = Room("Balcony", None, None, "MASTER_BEDROOM", None, None, None, "You are currently at the Balcony. \n "
                                                                           "To the South is the Master Bedroom. \n ",
-                                                                          [Garnet], [])
+               [Garnet], [])
 LIBRARY = Room("Library", None, None, "RANDOM_ROOM", "SNACK_BAR", None, None, "You are currently in the Library. \n "
                                                                               "To the South is Random Room. \n "
                                                                               "To the West is the Snack Bar. \n ",
                [Ancient_ChestPlate], [])
 
 RANDOM_ROOM = Room("Random Room", None, "DINING_ROOM", None, None, "ATTIC",
-                   None, "Interesting, there's a ladder here. \n " 
+                   None, "Interesting, there's a ladder here. \n "
                          "You are currently in a Random Room. \n "
                          "To the East is a teleporter to the Dining Room. \n ",
-                         [sniper2], [])
+                   [sniper2], [])
 
 KITCHEN = Room("Kitchen", None, "DINING_ROOM", "LAUNDRY_ROOM",
                None, None, None, "You are currently in the Kitchen. \n "
                                  "To the East is the Dining Room. \n "
                                  "To the South is the Laundry Room. \n ",
-                                 [Golden_Apple], [])
+               [Golden_Apple], [])
 
 LAUNDRY_ROOM = Room("Laundry Room", "KITCHEN", None, None, "GARAGE",
                     None, None, "You are currently in the Laundry Room. \n "
@@ -495,12 +495,12 @@ STORAGE_ROOM = Room("Storage Room", None, None, "GARAGE", None, None,
                     "BUNKER", "You are currently in the Storage Room. \n "
                               "There is a hatch leading down to a dark room. \n "
                               "To the South is the Garage. \n ",
-                              [Fire_Shotgun], [])
+                    [Fire_Shotgun], [])
 
 FRONT_YARD = Room("Front Yard", None, "DANCE_ROOM", None, None,
                   None, None, "You are currently in the Front Yard. \n "
                               "To the East is the Dance Room. \n ",
-                              [Emerald], [])
+                  [Emerald], [])
 
 ATTIC = Room("Attic", None, None, None, None,
              None, "LIBRARY", "You are currently in the Attic. \n "
@@ -518,7 +518,7 @@ BUNKER = Room("Bunker", None, None, "UNDERGROUND_PARKING_LOT", None, "STORAGE_RO
                     "To the South is the Underground Parking Lot. \n "
                     "Climb back up the ladder to go back to the Storage Room. \n "
                     "Type in 'gnome' for a meme to appear. \n ",
-                    [Ancient_Sword], [])
+              [Ancient_Sword], [])
 
 FOREST = Room("Forest", None, "BACKYARD", "GARDEN", None, None,
               None, "You are currently in the Forest. \n "
@@ -529,8 +529,7 @@ UNDERGROUND_PARKING_LOT = Room("Underground Parking Lot", "BUNKER", "DARK_HALLWA
                                None, "You are currently in the Underground Parking Lot. \n "
                                      "To the North is the Bunker. \n "
                                      "To the East is a Dark Hallway. \n ",
-                                     [Diamond], [Boss])
-
+                               [Diamond], [Boss])
 
 DARK_HALLWAY = Room("Dark Hallway", None, None, "ELEVATOR", "UNDERGROUND_PARKING_LOT", None, None,
                     "You are currently in the Dark Hallway. \n "
@@ -546,7 +545,6 @@ GARDEN = Room("Garden", "FOREST", "HALLWAY", None, None, None,
               None, "You are currently in the Garden. \n "
                     "To the North is the Forest. \n "
                     "To the East is a Hallway. \n ", [Ancient_Boots], [Venus_Fly_Trap])
-
 
 # Players
 player = Player(DINING_ROOM)

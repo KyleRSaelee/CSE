@@ -408,7 +408,8 @@ DINING_ROOM = Room("Dining Room", "LIVING_ROOM", "MASTER_BEDROOM",
                                                         "up or down. \n "
                                                         "You could also move by typing n, e, s, w, u, d. \n "
                                                         "If asked to pick up an item. You can reply with 'y', 'yes', "
-                                                        "or 'no'. \n " 
+                                                        "or 'no'. \n \n "
+                                                        
                                                         "To the North is the Living Room. \n "
                                                         "To the East is the MasterBedroom. \n "
                                                         "To the South is the Dance Room. \n "
@@ -601,7 +602,7 @@ while playing:
         print("░░░░░█▄░░░░░░░░░░░░░░░░░░░░░░░░░░▄▀▀▄▀▄▄")
         print("░░░░▄█▀▄░░░░░░░░░░░░░░░░░░░░░░▄▄▀░░▄▀░░░")
         print("░▄░▀░░█░▀▄▄░░░░░░░░░░░░░░░▄▄▄▀░░░▄▀░░░░░")
-        print("▀░░░░░░▀▄░░▀▄░░░░░░░░▄▄▄▀▀░░░░▄▀▀░░░░░░░")
+        print("▀░░░░░░▀▄░░▀▄░░░░░░░░▄▄▄▀▀░░░░▄▀▀░░░░░░░ \n ")
 
     if command.lower() in ["gnome"]:
         print("OOOOOH")
@@ -621,7 +622,7 @@ while playing:
         print("⣿⣿⣿⣿⣧⠄⠠⠈⢈⡄⠄⢁⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
         print("⣿⣿⣿⣿⣿⡀⠠⠐⣼⠇⠄⡀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
         print("⣿⣿⣿⣿⣯⠄⠄⡀⠈⠂⣀⠄⢀⠄⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿")
-        print("⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("⣿⣿⣿⣿⣿⣶⣄⣀⠐⢀⣸⣷⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿ \n ")
 
     if command.lower() in ["cheat"]:
         print("Congratulations you beat the game without even trying. Not only that you achieved nothing.")
